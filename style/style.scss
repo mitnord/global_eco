@@ -5,49 +5,100 @@
 }
 
 .container{
-    max-width: 1160px;
+    max-width: 1270px;
     padding: 0 20px;
 }
 
+@import 'module/mixin';
+
+
+ 
+
+
 .header{
     background: #090909;
-    height: 74px;
 
 
     &__flex{
-        height: 100%;
         display: flex;
         justify-content: space-between;
-        align-self: center;
+        align-items: center;
         margin: 0 auto;
 
-        
-
     }
 
-    &__elem{
+    &__elem {
         display: flex;
-        justify-content: flex-start;
-        color: #FFFFFF;
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 80%;
+        margin-right: 5%;
+    }
+    
 
-        & p{
-            margin-left: 8px;
-            color: #FFFFFF;
-        }
-        & a {
-            margin-left: 8px;
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-
-        & button{
-            height: 50%;
-            width: 100%;
-            color: #FFFFFF;
-            background: #2D9D1D;
-        }
+    &__address{
+        display: flex;
+        max-width: 33%;
+        @include header_p_style;
+        @include header_img_style;
+        padding: 17px 0 19px;
     }
 
+    &__email{
+        display: flex;
+        @include header_a_style;
+        @include header_img_style;
+        padding: 17px 0 19px;
+    }
 
+    &__phone{
+        display: flex;
+        @include header_a_style;
+        @include header_img_style;
+        padding: 17px 0 19px;
+    }
+
+    &__button{
+        display: flex;
+
+
+        width: 20%;
+        height: 90%;
+        padding: 17px 0 19px;
+        background: #2D9D1D;
+        border-radius: 1px;
+        font-family: Play;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #FFFFFF;
+        transition: 0.5s;
+
+        & label{
+            display: flex;
+            margin: 0 auto;
+            
+
+            & input{
+                display: none;
+            }
+        }
+
+        &:hover{
+            background: #5ECB1B;
+        }
+
+    }
+
+}
+
+.promo{
+    height: 100vh;
+    background: url(../img/Promo_bg.jpg);
+}
+
+.navigation{
+    display: flex;
+    margin: 0 auto;
 }
